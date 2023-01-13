@@ -1,0 +1,13 @@
+{
+	"name": "golang",
+	"dockerComposeFile": "../docker-compose.yml",
+	"workspaceFolder": "/golang",
+	"service": "golang",
+	"runServices": [
+		"golang"
+	],
+	"extensions": [
+        "esbenp.prettier-vscode"
+	],
+	"shutdownAction": "stopCompose"
+}

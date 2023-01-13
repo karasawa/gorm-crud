@@ -1,0 +1,30 @@
+version: '3'
+services:
+  golang:
+    container_name: golang
+    build: ./docker/golang/
+    tty: true
+    volumes:
+      - ./golang:/golang/
+    ports:
+      - "8080:8080"
+
+  postgres:
+    image: postgres
+    container_name: postgres
+    restart: always
+    volumes:
+      - postgres_volume:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=password
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres_volume:
+  
+networks:
+    default:
+      name: app-network
