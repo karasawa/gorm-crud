@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<head>
+    <!-- <title>home</title> -->
+</head>
+<body>
+    <div>
+        <h3>go-todo</h3>
+        <a href="/todo/create">新規作成</a>
+        {{range .todos}}
+        <div>
+            <h3>{{.ID}}: {{.Task}} <a href="/todo/delete/{{.ID}}">削除</a></h3>
+        </div>
+        {{end}}
+    </div>
+</body>

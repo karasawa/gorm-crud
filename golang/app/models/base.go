@@ -1,12 +1,14 @@
 package models
 
 import (
+	"fmt"
 	"log"
+
+	"github.com/karasawa/gorm-crud.git/config"
 
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
-
-  )
+)
 
 type User struct {
 	gorm.Model
@@ -19,8 +21,16 @@ type Post struct {
 	Content string
 }
 
+type Todo struct {
+	gorm.Model
+	Task string
+}
+
 func DbInit() *gorm.DB {
-	dsn := "host=postgres user=root password=password dbname=postgres port=5432 sslmode=disable TimeZone=Asia/Tokyo"
+	cfg, _ := config.Load()
+
+	dsn := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%s sslmode=disable TimeZone=Asia/Tokyo", 
+			cfg.Db.Host, cfg.Db.User, cfg.Db.Password, cfg.Db.DbName, cfg.Db.Port)
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
 		log.Fatalln(err)
@@ -28,6 +38,7 @@ func DbInit() *gorm.DB {
 
 	db.AutoMigrate(&User{})
 	db.AutoMigrate(&Post{})
+	db.AutoMigrate(&Todo{})
 
 	return db
 }
