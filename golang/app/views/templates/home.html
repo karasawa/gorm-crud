@@ -8,7 +8,7 @@
         <a href="/todo/create">新規作成</a>
         {{range .todos}}
         <div>
-            <h3>{{.ID}}: {{.Task}} <a href="/todo/delete/{{.ID}}">削除</a></h3>
+            <h3>{{.ID}}: {{.Task}} <a href="/todo/delete/{{.ID}}">削除</a> <a href="/todo/update/{{.ID}}">更新</a></h3>
         </div>
         {{end}}
     </div>

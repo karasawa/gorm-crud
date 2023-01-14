@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<head>
+    <title>create_todo</title>
+</head>
+<body>
+    <div>
+        <h3>go-todo</h3>
+        <h3>please update</h3>
+        <form action="/todo/update/{{.ID}}" method="post">
+            <input type="text" name="task"/>
+            <button type="submit">作成</button>
+        </form>
+    </div>
+</body>

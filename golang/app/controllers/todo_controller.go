@@ -53,3 +53,22 @@ func TodoDelete(ctx *gin.Context) {
 	}
 	ctx.Redirect(http.StatusFound, "/")
 }
+
+func TodoUpdate(ctx *gin.Context) {
+	ID := ctx.Param("ID")
+
+	if ctx.Request.Method == "GET" {
+		ctx.HTML(http.StatusOK, "update_todo.html", gin.H{
+			"ID": ID,
+		})
+		return
+	}
+	db := models.DbInit()
+
+	postTask := ctx.PostForm("task")
+	result := db.Where("id = ?", ID).Updates(models.Todo{Task: postTask})
+	if result.Error != nil {
+		log.Fatalln(result.Error)
+	}
+	ctx.Redirect(http.StatusFound, "/")
+}

@@ -59,6 +59,8 @@ func main() {
 	{
 		todo.GET("/create", controllers.TodoCreate)
 		todo.POST("/create", controllers.TodoCreate)
+		todo.GET("/update/:ID", controllers.TodoUpdate)
+		todo.POST("/update/:ID", controllers.TodoUpdate)
 		todo.GET("/delete/:ID", controllers.TodoDelete)
 	}
   r.GET("/api", func(ctx *gin.Context) {

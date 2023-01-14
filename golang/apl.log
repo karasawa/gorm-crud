@@ -805,3 +805,62 @@ Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-
 [GIN] 2023/01/14 - 08:21:19 | 302 |  116.671119ms |      172.22.0.1 | POST     "/todo/create"
 [GIN] 2023/01/14 - 08:21:19 | 200 |  116.222957ms |      172.22.0.1 | GET      "/"
 [GIN] 2023/01/14 - 08:21:21 | 200 |  100.398907ms |      172.22.0.1 | GET      "/api"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (4): 
+	- 
+	- create_todo.html
+	- home.html
+	- update_todo.html
+
+[GIN-debug] GET    /                         --> github.com/karasawa/gorm-crud.git/app/controllers.TodoGet (4 handlers)
+[GIN-debug] GET    /todo/create              --> github.com/karasawa/gorm-crud.git/app/controllers.TodoCreate (4 handlers)
+[GIN-debug] POST   /todo/create              --> github.com/karasawa/gorm-crud.git/app/controllers.TodoCreate (4 handlers)
+[GIN-debug] GET    /todo/update/:ID          --> github.com/karasawa/gorm-crud.git/app/controllers.TodoUpdate (4 handlers)
+[GIN-debug] POST   /todo/update/:ID          --> github.com/karasawa/gorm-crud.git/app/controllers.TodoUpdate (4 handlers)
+[GIN-debug] GET    /todo/delete/:ID          --> github.com/karasawa/gorm-crud.git/app/controllers.TodoDelete (4 handlers)
+[GIN-debug] GET    /api                      --> main.main.func1 (4 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2023/01/14 - 08:36:38 | 200 |    161.5225ms |      172.22.0.1 | GET      "/"
+[GIN] 2023/01/14 - 08:36:41 | 302 |   137.39155ms |      172.22.0.1 | GET      "/todo/delete/10"
+[GIN] 2023/01/14 - 08:36:41 | 200 |  133.415021ms |      172.22.0.1 | GET      "/"
+[GIN] 2023/01/14 - 08:36:42 | 302 |   99.712146ms |      172.22.0.1 | GET      "/todo/delete/11"
+[GIN] 2023/01/14 - 08:36:42 | 200 |  127.530471ms |      172.22.0.1 | GET      "/"
+[GIN] 2023/01/14 - 08:36:44 | 200 |   25.571936ms |      172.22.0.1 | GET      "/todo/create"
+[GIN] 2023/01/14 - 08:36:50 | 200 |  117.580172ms |      172.22.0.1 | GET      "/"
+[GIN] 2023/01/14 - 08:36:51 | 200 |   20.623463ms |      172.22.0.1 | GET      "/todo/create"
+[GIN] 2023/01/14 - 08:36:56 | 302 |  100.208802ms |      172.22.0.1 | POST     "/todo/create"
+[GIN] 2023/01/14 - 08:36:56 | 200 |  120.727334ms |      172.22.0.1 | GET      "/"
+[GIN] 2023/01/14 - 08:37:00 | 200 |   23.307482ms |      172.22.0.1 | GET      "/todo/update/9"
+[GIN] 2023/01/14 - 08:37:09 | 404 |       2.813µs |      172.22.0.1 | POST     "/todo/update"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (4): 
+	- update_todo.html
+	- 
+	- create_todo.html
+	- home.html
+
+[GIN-debug] GET    /                         --> github.com/karasawa/gorm-crud.git/app/controllers.TodoGet (4 handlers)
+[GIN-debug] GET    /todo/create              --> github.com/karasawa/gorm-crud.git/app/controllers.TodoCreate (4 handlers)
+[GIN-debug] POST   /todo/create              --> github.com/karasawa/gorm-crud.git/app/controllers.TodoCreate (4 handlers)
+[GIN-debug] GET    /todo/update/:ID          --> github.com/karasawa/gorm-crud.git/app/controllers.TodoUpdate (4 handlers)
+[GIN-debug] POST   /todo/update/:ID          --> github.com/karasawa/gorm-crud.git/app/controllers.TodoUpdate (4 handlers)
+[GIN-debug] GET    /todo/delete/:ID          --> github.com/karasawa/gorm-crud.git/app/controllers.TodoDelete (4 handlers)
+[GIN-debug] GET    /api                      --> main.main.func1 (4 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2023/01/14 - 08:43:27 | 200 |  162.305693ms |      172.22.0.1 | GET      "/"
+[GIN] 2023/01/14 - 08:43:28 | 200 |  139.226823ms |      172.22.0.1 | GET      "/"
+[GIN] 2023/01/14 - 08:43:30 | 200 |   25.706474ms |      172.22.0.1 | GET      "/todo/update/9"
