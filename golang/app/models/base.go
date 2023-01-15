@@ -12,7 +12,7 @@ import (
 
 type Todo struct {
 	gorm.Model
-	Task string
+	Task string `json:"task"`
 }
 
 func DbInit() *gorm.DB {
