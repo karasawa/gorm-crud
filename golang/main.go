@@ -2,6 +2,7 @@ package main
 
 import (
 	"io"
+	"net/http"
 	"os"
 	"time"
 
@@ -53,5 +54,19 @@ func main() {
 		todo.POST("/update/:ID", controllers.TodoUpdate)
 		todo.GET("/delete/:ID", controllers.TodoDelete)
 	}
+  r.GET("/api", func(ctx *gin.Context) {
+    db := models.DbInit()
+
+    todos := []models.Todo{}
+
+    result := db.Find(&todos)
+    if result.Error != nil {
+      return
+    }
+    ctx.JSON(http.StatusOK, gin.H{
+      "response": "wawawa",
+      "todos": todos,
+    })
+  })
   r.Run(":8080")
 }

@@ -32,6 +32,12 @@ func TodoCreate(ctx *gin.Context) {
 	}
 	db := models.DbInit()
 
+	// var todo models.Todo
+	// if err := ctx.ShouldBindJSON(&todo); err != nil {
+	// 	ctx.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+	// 	return
+	// }
+
 	postTask := ctx.PostForm("task")
 	todo := models.Todo{Task: postTask}
 	result := db.Create(&todo)
