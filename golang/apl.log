@@ -921,3 +921,52 @@ Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-
 [GIN-debug] Listening and serving HTTP on :8080
 [GIN] 2023/01/14 - 15:43:49 | 200 |  202.379126ms |      172.22.0.1 | GET      "/"
 [GIN] 2023/01/14 - 15:43:51 | 200 |   26.496638ms |      172.22.0.1 | GET      "/todo/update/9"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] Loaded HTML Templates (4): 
+	- home.html
+	- update_todo.html
+	- 
+	- create_todo.html
+
+[GIN-debug] GET    /                         --> github.com/karasawa/gorm-crud.git/app/controllers.TodoGet (4 handlers)
+[GIN-debug] GET    /todo/create              --> github.com/karasawa/gorm-crud.git/app/controllers.TodoCreate (4 handlers)
+[GIN-debug] POST   /todo/create              --> github.com/karasawa/gorm-crud.git/app/controllers.TodoCreate (4 handlers)
+[GIN-debug] GET    /todo/update/:ID          --> github.com/karasawa/gorm-crud.git/app/controllers.TodoUpdate (4 handlers)
+[GIN-debug] POST   /todo/update/:ID          --> github.com/karasawa/gorm-crud.git/app/controllers.TodoUpdate (4 handlers)
+[GIN-debug] GET    /todo/delete/:ID          --> github.com/karasawa/gorm-crud.git/app/controllers.TodoDelete (4 handlers)
+[GIN-debug] GET    /api                      --> main.main.func1 (4 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2023/01/14 - 15:44:46 | 200 |  180.466169ms |      172.22.0.1 | GET      "/"
+[GIN] 2023/01/14 - 15:44:48 | 200 |   29.104793ms |      172.22.0.1 | GET      "/todo/update/9"
+[GIN] 2023/01/14 - 15:44:50 | 200 |   124.76136ms |      172.22.0.1 | GET      "/"
+[GIN] 2023/01/14 - 15:44:51 | 200 |    18.70882ms |      172.22.0.1 | GET      "/todo/create"
+[GIN] 2023/01/14 - 15:44:52 | 200 |  127.045992ms |      172.22.0.1 | GET      "/"
+[GIN] 2023/01/14 - 15:44:56 | 302 |  149.214597ms |      172.22.0.1 | GET      "/todo/delete/9"
+[GIN] 2023/01/14 - 15:44:56 | 200 |  133.289536ms |      172.22.0.1 | GET      "/"
+[GIN] 2023/01/14 - 15:44:58 | 200 |   20.920739ms |      172.22.0.1 | GET      "/todo/update/12"
+[GIN] 2023/01/14 - 15:46:55 | 200 |   128.36274ms |      172.22.0.1 | GET      "/"
+[GIN] 2023/01/14 - 15:46:57 | 200 |   31.396552ms |      172.22.0.1 | GET      "/todo/create"
+[GIN] 2023/01/14 - 15:46:59 | 200 |  118.435305ms |      172.22.0.1 | GET      "/"
+[GIN] 2023/01/14 - 15:47:01 | 200 |   27.741099ms |      172.22.0.1 | GET      "/todo/create"
+[GIN] 2023/01/14 - 15:47:06 | 302 |  119.422572ms |      172.22.0.1 | POST     "/todo/create"
+[GIN] 2023/01/14 - 15:47:06 | 200 |  179.061954ms |      172.22.0.1 | GET      "/"
+[GIN] 2023/01/14 - 15:47:45 | 302 |  130.119606ms |      172.22.0.1 | GET      "/todo/delete/12"
+[GIN] 2023/01/14 - 15:47:45 | 200 |  135.103771ms |      172.22.0.1 | GET      "/"
+[GIN] 2023/01/14 - 15:47:51 | 200 |   21.654437ms |      172.22.0.1 | GET      "/todo/create"
+[GIN] 2023/01/14 - 15:47:58 | 302 |   96.421939ms |      172.22.0.1 | POST     "/todo/create"
+[GIN] 2023/01/14 - 15:47:58 | 200 |  145.862868ms |      172.22.0.1 | GET      "/"
+[GIN] 2023/01/14 - 15:49:01 | 200 |   93.813865ms |      172.22.0.1 | GET      "/api"
+[GIN] 2023/01/15 - 04:09:42 | 200 |  111.745128ms |      172.22.0.1 | GET      "/api"
+[GIN] 2023/01/15 - 04:09:54 | 204 |        9.61µs |      172.22.0.1 | OPTIONS  "/todo/create"
+[GIN] 2023/01/15 - 04:09:54 | 302 |  103.923066ms |      172.22.0.1 | POST     "/todo/create"
+[GIN] 2023/01/15 - 04:09:54 | 204 |       24.22µs |      172.22.0.1 | OPTIONS  "/"
+[GIN] 2023/01/15 - 04:09:54 | 200 |  125.251246ms |      172.22.0.1 | GET      "/"
+[GIN] 2023/01/15 - 04:09:56 | 200 |   106.53236ms |      172.22.0.1 | GET      "/api"
+[GIN] 2023/01/15 - 04:14:27 | 200 |   99.232852ms |      172.22.0.1 | GET      "/api"

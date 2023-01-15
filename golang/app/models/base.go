@@ -10,17 +10,6 @@ import (
 	"gorm.io/gorm"
 )
 
-type User struct {
-	gorm.Model
-	Name string
-	Email string
-}
-
-type Post struct {
-	gorm.Model
-	Content string
-}
-
 type Todo struct {
 	gorm.Model
 	Task string
@@ -36,8 +25,6 @@ func DbInit() *gorm.DB {
 		log.Fatalln(err)
 	}
 
-	db.AutoMigrate(&User{})
-	db.AutoMigrate(&Post{})
 	db.AutoMigrate(&Todo{})
 
 	return db
